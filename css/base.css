@@ -1,0 +1,13 @@
+:root{
+    --sidebar-color: #E1C16E; 
+    --color-white: #ffffff;
+    --color-black: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+}

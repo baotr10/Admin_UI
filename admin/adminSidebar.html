@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../css/adminSidebar.css">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <!-- Link Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+
+    <!-- Link JS -->
+    <link rel="stylesheet" href="../js/sidebar.js">
+</head>
+
+<body>
+    <div class="side-bar">
+        <!-- header sidebar -->
+        <header class="sidebar-head">
+            <img src="../images/5.png" alt="Logo">
+            <h3 class="sidebar-title">CAKKIE</h3>
+        </header>
+        <h3 class="title-overview">OVERVIEW</h3>
+
+        <div class="menu">
+            <div class="item">
+                <a href="#">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2 class="item-title">Dashboard</h2>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#" class="sub-btn">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h2 class="item-title">Catlog</h2>
+                    <i class="fa-solid fa-angle-right dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                    <a href="" class="sub-item">Category</a>
+                    <a href="" class="sub-item">Product</a>
+                    <a href="" class="sub-item">Remove</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <h2 class="item-title">Customers</h2>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <i class="fa-solid fa-object-group"></i>
+                    <h2 class="item-title">Design</h2>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#" class="sub-btn">
+                    <i class="fa-solid fa-wallet"></i>
+                    <h2 class="item-title">Sales</h2>
+                    <i class="fa-solid fa-angle-right dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                    <a href="#" class="sub-item">Order List</a>
+                    <a href="#" class="sub-item">Order Status</a>
+                    <a href="#" class="sub-item">Coupon</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu">
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.sub-btn').click(function () {
+            $(this).next('.sub-menu').slideToggle();  // Corrected $(this)
+            $(this).find('.dropdown').toggleClass('rotate');
+            $(this).toggleClass('active');
+        });
+    </script>
+</body>
+
+</html>

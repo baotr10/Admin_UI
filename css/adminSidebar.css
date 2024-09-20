@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.side-bar {
+    background-color: var(--sidebar-color);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+    transition: 0.6s ease-in-out all;
+    transition-property: left;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.side-bar .sidebar-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    align-items: center;
+}
+
+.side-bar .sidebar-head img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--color-white);
+}
+
+.side-bar .sidebar-head .sidebar-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.side-bar .title-overview {
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+.side-bar .menu {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.side-bar .menu .item a {
+    color: var(--color-black);
+    text-decoration: none;
+    display: block;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.item i {
+    margin-right: 25px;
+    font-size: 20px;
+}
+
+.item a .item-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.item a .dropdown {
+    position: absolute;
+    right: 0;
+    transition: all ease-in-out 0.3s;
+}
+
+.item .sub-menu {
+    display: none;
+}
+
+.menu .item .sub-menus {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.menu .item .sub-menu a{
+    font-size: 18px;
+    right: -40px;
+    font-weight: 550;
+}
+
+.side-bar .menu .item:not(:first-child):hover::before {
+    content: '';
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 7.5px 7.5px 0 7.5px var(--color-white);
+}
+
+.side-bar .menu .item:not(:first-child):hover::after {
+    content: '';
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 7.5px -7.5px 0 7.5px var(--color-white);
+}
+
+/* Hover */
+.menu .item a:hover{
+    background-color: var(--color-white);
+    border-radius: 40px 0 0 40px;
+}
